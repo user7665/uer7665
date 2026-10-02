@@ -1394,6 +1394,17 @@ for (let i = 0; i < state.balls.length; i++) {
     loadBlur();             // 占位图是内联的，几乎立刻可用
     loadSprites();          // 贴图异步到位，到了会自动重画预览
     requestAnimationFrame((t) => { last = t; requestAnimationFrame(frame); });
+    /* --- 开服弹窗交互 --- */
+const welcomeModal = document.getElementById('welcomeModal');
+const startBtn = document.getElementById('startBtn');
+if (startBtn && welcomeModal) {
+  startBtn.addEventListener('click', () => {
+    welcomeModal.style.display = 'none'; // 隐藏弹窗
+    Sound.ensure(); // 激活音频（必须由用户点击触发）
+    if (!Sound.muted) Sound.merge(1); // 点开始时播个小音效
+  });
+}
+    
   }
 
   if (document.readyState === 'loading') {

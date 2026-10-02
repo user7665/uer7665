@@ -848,7 +848,7 @@ for (let i = 0; i < state.balls.length; i++) {
     /* —— 兜底一：贴图还没到位时，先画一张极模糊的同形状缩略图 ——
        观感是「图正在慢慢变清晰」，而不是「图挂了」看到一堆卡通脸。
        这张缩略图是内联的 data URL（assets/fruits/blur.js，约 8KB），不走网络。 */
-    if (blurImg && blurCfg && blurCfg.cols > 0) {
+   /* if (blurImg && blurCfg && blurCfg.cols > 0) {
       const idx = tier < blurCfg.cols ? tier : blurCfg.cols - 1;
       const box = (r * 2) / ASSET_FILL;
       const cell = blurCfg.cell;

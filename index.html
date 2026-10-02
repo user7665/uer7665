@@ -17,7 +17,21 @@
 <body>
 
 <main class="app">
-
+<!-- 开服福利弹窗 -->
+<div id="welcomeModal" class="modal-mask">
+  <div class="modal-box">
+    <h2 class="modal-title">🎉 开服狂欢 · 福利大放送 🎉</h2>
+    <p class="modal-highlight">
+      开局即送 <strong>9999</strong> 复活币！
+    </p>
+    <p class="modal-desc">
+      拖动鼠标或手指瞄准，松手投放。<br>
+      两个相同的水果碰撞就会合体哦！
+    </p>
+    <p class="modal-tip">💡 首次点击可开启音效，畅玩更带感</p>
+    <button id="startBtn" class="modal-btn">🔥 立即收下福利，开始游戏</button>
+  </div>
+</div>
   <!-- ===== 游戏区 ===== -->
   <section class="stage" id="stage">
     <canvas id="game" aria-label="合成大奶熊游戏区域"></canvas>
